@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <menu>
+        <add id="Magenuts_AutoInvoice::autoadmin" title="Magenuts Auto Invoice" module="Magenuts_AutoInvoice" sortOrder="10"
+             parent="Magenuts_Core::menu" dependsOnModule="Magenuts_AutoInvoice" resource="Magenuts_AutoInvoice::autoadmin"/>
+        <add id="Magenuts_AutoInvoice::config_autoinvoice"
+             title="Settings"
+             module="Magenuts_AutoInvoice"
+             sortOrder="50"
+             resource="Magenuts_AutoInvoice::autoinvoice"
+             action="adminhtml/system_config/edit/section/autoinvoice"
+             parent="Magenuts_AutoInvoice::autoadmin"/>
+    </menu>
+</config>
